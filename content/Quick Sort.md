@@ -1,0 +1,1 @@
+Este un algoritm de [[Sortare|sortare]] [[Recursivitate|recursiv]] de tip [[Divide et Impera]], în loc, adică nu folosește vectori auxiliari ca [[Merge Sort]]. Complexitatea medie este de $O( n\times (log_2\ n))$, dar complexitatea în cazul unui vector ordonat la [[Quick Sort]] crește la $O(n^2)$

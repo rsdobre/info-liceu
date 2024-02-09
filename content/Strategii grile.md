@@ -1,0 +1,1 @@
+- Rezolvă mai întâi problema singur, fără să te uiți pe variante, iar apoi evaluează fiecare variantă și verifică dacă se potrivește cu rezolvarea ta. Este mult mai ușor așa, decât să evaluezi fiecare variantă în parte, fără să ai o idee deja.

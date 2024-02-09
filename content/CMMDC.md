@@ -1,0 +1,2 @@
+
+[[Diagonala intersectează linii]]
