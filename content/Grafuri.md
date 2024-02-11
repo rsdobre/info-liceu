@@ -1,4 +1,5 @@
 Graf = orice mulțime finită $V$ prevăzută cu o relație binară internă $E$. Notăm graful cu $G=(V,E)$
+Noțiunile de [[Grafuri orientate#Vârf|vârf]] și [[Grafuri neorientate#Nod|nod]] sunt echivalente (dar cele de [[Grafuri orientate#Arc|arc]] și [[Grafuri neorientate#Muchie|muchie]] nu sunt).
 # Tipuri de grafuri
 [[Grafuri orientate]]
 [[Grafuri neorientate]]
@@ -16,25 +17,24 @@ Fie $m$ numărul de muchii/arce al unui graf, numărul total de grafuri parțial
 $C_m^0+C_m^1+...+C_m^m=2^m$ (vezi [[Combinări#^e79dc2|calculul numărului de submulțimi]]). 
 Precizare: nu este relevant numărul de noduri/vârfuri
 ## Subgraf
-Dacă dintr-un graf $G=(V,E)$ se elimină **cel puțin un [[Grafuri neorientate#Nod|nod]]/[[Grafuri orientate#Vârf|vârf]]** împreună cu [[Grafuri neorientate#Muchie|muchiile]]/[[Grafuri orientate#Arc|arcele]] incidente lui, atunci noul graf $G'=(V',E'),\ E'\subset E,\ V'\subset V$ se numește subgraf al lui $G$. 
-
+Dacă dintr-un graf $G=(V,E)$ se elimină **[[Grafuri neorientate#Nod|noduri]]/[[Grafuri orientate#Vârf|vârfuri]]** (se pot elimina și 0 noduri) împreună cu [[Grafuri neorientate#Muchie|muchiile]]/[[Grafuri orientate#Arc|arcele]] incidente lui, atunci noul graf $G'=(V',E'),\ E'\subseteq E,\ V'\subseteq V$ se numește subgraf al lui $G$. 
+- [ ] fix this when clear (inclus sau egal, sau inclus și inegal)
 **ATENȚIE**: [[Graful vid]]
-
 Fie un graf cu $n$ noduri/vârfuri, numărul total de subgrafuri este suma numărului de subgrafuri cu $0,1,2,3,...,n-1$ noduri/vârfuri eliminate. Deci formula este aceasta: $C_n^0+C_n^1+C_n^2+...+C_n^{n-1}=2^n-1$ (vezi [[Combinări#^e79dc2|calculul numărului de submulțimi]]). 
 Precizare: nu este relevant numărul de muchii/arce.
 ## Graf conex
 Graful conex este un graf $G=(V,E)$ în care pentru orice pereche de noduri $(v,w),\ v,w\in V$ există un [[Grafuri neorientate#Lanț|lanț]]/[[Grafuri orientate#Drum|drum]] care le unește
 ## Graf complet
-Graful $G$ se numește graf complet dacă oricare două [[Grafuri neorientate#Nod|noduri]]/[[Grafuri orientate#Vârf|vârfuri]] distincte ale sale sunt [[Grafuri neorientate#Adiacența|adiacente]] (în cazul [[Grafuri orientate|grafului orientat]] complet vom folosi definiția de pe pbinfo pentru [[Grafuri orientate#Adiacență|adiacență]])
-Numărul muchii într-un graf cu $n$ noduri/vârfuri este $\frac{(n-1)n}{2}$.
-- [ ] 🔼 de completat cu celelalte formule de pe pbinfo
+Graful $G$ se numește graf complet dacă oricare două [[Grafuri neorientate#Nod|noduri]]/[[Grafuri orientate#Vârf|vârfuri]] distincte ale sale sunt [[Grafuri neorientate#Adiacența|adiacente]] (în cazul [[Grafuri orientate#comp|grafului orientat]] complet vom folosi definiția de pe pbinfo pentru [[Grafuri orientate#Adiacență|adiacență]])
+Numărul muchii într-un [[Grafuri neorientate#Graf complet|graf complet neorientat]] cu $n$ noduri este $\frac{n(n-1)}{2}$. În cazul [[Grafuri orientate#Graf complet|grafului orientat complet]] nu putem ști numărul de arce.
 ## Graf nul
 $G=(V,\varnothing)$
 Graful nul este graful în care nu există [[Grafuri neorientate#Muchie|muchii]]/[[Grafuri orientate#Arc|arce]], sau în care mulțimea  muchiilor este vidă $E=\varnothing$.
 A nu fi confundat cu cu [[Graful vid|graful vid]].
 [[#Graf complementar|Graful complementar]] al grafului nul este [[#Graf complet|graful complet]].
 ## Graf complementar
-- [ ]  🔼 de completat cu definiția de pe pbinfo
+Fie $G=(V,E)$ un graf. Se numește graf complementar al grafului $G$, graful $G'=(V,E')$ cu proprietatea că două noduri $i$ și $j$ sunt [[Grafuri neorientate#Adiacența|adiacente]] în $G'$ dacă și numai dacă nu sunt adiacente în $G$. Cu alte cuvinte, dacă am considera graful complet $G=(V,E'')$ , $E'\cap E=\varnothing\ \text{și}\ E'\cup E=E''$
+Atenție: acest concept nu prea se aplică [[Grafuri orientate|grafurilor orientate]].
 ## Componenta conexă
 Componenta conexă este un [[#Subgraf|subgraf]] al grafului de referință, maximal în raport cu proprietatea de conexitate (între oricare 2 vârfuri există un lanț). Sunt considerate componente conexe și nodurile izolate.
 Practic este o componentă conexă când nu mai putem alege încă un [[Grafuri neorientate#Nod|nod]]/[[Grafuri orientate#Vârf|vârf]] care să fie legat de celelalte. Putem spune că sunt "insulele" din graful de referința

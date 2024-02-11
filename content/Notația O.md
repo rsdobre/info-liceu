@@ -1,0 +1,3 @@
+În cazul în care ne confruntăm cu o sumă de mai multe astfel de variabile, pentru a nu lungi foarte mult formula de calcul a complexității, se considera o notație corecta selectarea celei mai mari (cele mai semnificative) valori. Exemplu: $O(m + n^2)$ va fi considerat $O(n ^ 2)$ daca $n^2\gt m$. De asemenea și $O(n + m)$ poate fi considerată $O(n)$ daca $n \gt m$ sau invers în caz contrar.
+## Explicație
+Dacă $m<n^2$, evident $O(m+n^2)\lt O(2\times n^2)$, iar cum nu folosim constante în complexități $O(2\times n^2)=O(n^2)$, deci $O(m+n^2)\approx O(n^2)$.

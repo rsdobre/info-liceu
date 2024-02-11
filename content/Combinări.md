@@ -6,11 +6,11 @@ $C_n^k=\text{card}(M)\ \text{unde}\ M=\{c_1, c_2, ..., c_k\}\ \text{unde}\ c_i\l
 
 $C_n^k=\frac{n!}{k!\times(n-k)!}=\frac{A_n^k}{P_k}=C_{n-1}^k+C_{n-1}^{k-1}$
 
-Ultima varianta este cea mai bună pentru programare, deoarece se folosește [[Recursivitate|recursivitate]], față de primele 2 variante unde s-ar ajunge la numere foarte mari înainte de împărțire, care nu pot fii stocate în C++. Metoda aceasta reiese din [[Triunghiul lui Pascal]]. Evident pentru a evita calcule repetate se poate utiliza [[Memoizare|memoizarea]].
+Ultima varianta este cea mai bună pentru programare, deoarece se folosește [[Recursivitatea|recursivitate]], față de primele 2 variante unde s-ar ajunge la numere foarte mari înainte de împărțire, care nu pot fii stocate în C++. Metoda aceasta reiese din [[Triunghiul lui Pascal]]. Evident pentru a evita calcule repetate se poate utiliza [[Memoizare|memoizarea]].
 
 # Numărul de combinări
 
-Metoda [[Recursivitate|recursivă]]:
+Metoda [[Recursivitatea|recursivă]]:
 ```cpp
 int combinari(int n, int k){
     if(k == 0 || n == k)

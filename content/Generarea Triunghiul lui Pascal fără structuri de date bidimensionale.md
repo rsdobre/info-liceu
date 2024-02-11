@@ -45,4 +45,4 @@ int main(){
 	}
 }
 ```
-Această variantă mai mult ca sigur nu ar fi luat punctaj maxim, deoarece este foarte [[Complexitate de timp|ineficientă]], și ar lua limită de timp.
+Această variantă mai mult ca sigur nu ar fi luat punctaj maxim, deoarece este foarte [[Complexitatea de timp|ineficientă]], și ar lua limită de timp.

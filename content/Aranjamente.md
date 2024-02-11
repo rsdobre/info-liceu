@@ -17,7 +17,7 @@ int aranjamente(int n, int k){
 	return prod;
 }
 ```
-Varianta [[Recursivitate|recursivă]]:
+Varianta [[Recursivitatea|recursivă]]:
 ```cpp
 int aranjamente(int n, int k){
 	if(k==0)

@@ -1,1 +1,1 @@
-[[Memoizare|Memoizarea]] este folosită deseori în cazul funcțiilor [[Recursivitate|recursive]] pentru a evita calculul valorilor deja determinate. Astfel, stocăm rezultatele apelurilor funcției într-o matrice sau un vector. Un exemplu bun de utilizarea memorizării este [[fotbal]].
+[[Memoizare|Memoizarea]] este folosită deseori în cazul funcțiilor [[Recursivitatea|recursive]] pentru a evita calculul valorilor deja determinate. Astfel, stocăm rezultatele apelurilor funcției într-o matrice sau un vector. Un exemplu bun de utilizarea memorizării este [[fotbal]].

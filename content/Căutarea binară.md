@@ -1,4 +1,4 @@
-Căutarea binară se poate face atât iterativ cât și [[Recursivitate|recursiv]] folosind [[Divide et Impera]], pentru a determina dacă un număr există, sau pentru a determina poziția unui număr într-un vector [[Sortare|sortat]] anterior. Ea are complexitate $O(log_2\ (n) )$
+Căutarea binară se poate face atât iterativ cât și [[Recursivitatea|recursiv]] folosind [[Divide et Impera]], pentru a determina dacă un număr există, sau pentru a determina poziția unui număr într-un vector [[Sortare|sortat]] anterior. Ea are [[Complexitatea de timp|complexitate de timp]] $O(\log_2 n )$ și [[Complexitatea de spațiu|complexitate de spațiu]] $O(n)$. Evident un program complet ar citi cele $n$ numere, iar atunci complexitatea de timp ar deveni $O(n)$ ($\log_2n\leq n$).
 
 Varianta cu while, care returnează poziția:
 

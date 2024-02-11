@@ -11,7 +11,7 @@ Sau tradus pentru [[Matrice|matricea]] noastră folosind `i` și `j`: $C_i^j = \
  - Suma elementelor de pe linia `n` este egală cu $2^n$
  - Dacă considerăm matricea noastră ma fiind `tp[m][m]`, $C_n^k$ va fii stocat în `tp[n][k]`
 # Generarea combinărilor folosind [[Triunghiul lui Pascal|triunghiul lui Pascal]]
- Evident pentru a genera [[Combinări|combinările]] putem folosi [[Combinări#Generarea combinărilor|metoda recursivă]] și putem aplica [[Memoizare|memoizarea]] pentru a o face mai [[Complexitate de timp|eficientă]]. Totuși pentru a aplica [[Programarea dinamică|programarea dinamică]], vom folosi [[Triunghiul lui Pascal#Forma matriceală|forma matriceală a triunghiului lui Pascal]].
+ Evident pentru a genera [[Combinări|combinările]] putem folosi [[Combinări#Generarea combinărilor|metoda recursivă]] și putem aplica [[Memoizare|memoizarea]] pentru a o face mai [[Complexitatea de timp|eficientă]]. Totuși pentru a aplica [[Programarea dinamică|programarea dinamică]], vom folosi [[Triunghiul lui Pascal#Forma matriceală|forma matriceală a triunghiului lui Pascal]].
 ## Cod
 ### Varianta cu toată [[Matrice|matricea]]
 Pentru a calcula $C_n^k$ folosind [[Triunghiul lui Pascal]] urmăm pașii:
@@ -20,7 +20,7 @@ Pentru a calcula $C_n^k$ folosind [[Triunghiul lui Pascal]] urmăm pașii:
 - Parcurgem rândul cât timp `j<i` (înainte de diagonala principală, care este deja umplută)
 - Ne oprim când `i>n` (trecem rândul pe care se află $C_n^k$)
 	- Pe poziția `tp[i][j]` punem suma dintre valoarea direct de deasupra `tp[i-1][j]`, și cea din stânga celei de sus `tp[i-1][j-1]` (`tp[i][j] = tp[i-1][j-1] + tp[i-1][j]`)
-În această rezolvare stocăm foarte multe date care nu sunt necesare, deși nu folosim decât linia anterioară, avem o [[complexitate de spațiu|complexitate de spațiu]] $O(n^2)$ 
+În această rezolvare stocăm foarte multe date care nu sunt necesare, deși nu folosim decât linia anterioară, avem o [[Complexitatea de spațiu|complexitate de spațiu]] $O(n^2)$ 
 ```cpp
 #include <iostream>
 using namespace std;
@@ -45,9 +45,9 @@ int main(){
 ### Varianta cu un singur [[Vectori|vector]]
 Totuși putem observa că în calcularea unui element folosim doar rândul anterior, nu și celelalte. Deci putem face soluția [[Complexitatea de spațiu|mai eficientă privind spațiul]] folosind un singur [[Vectori|vector]] peste care scriem de mai multe ori.
 Trebuie să ținem cont de elementele folosite în calcul deoarece în calculul lui $C_n^k$ folosim $C_{n-1}^k$ și $C_{n-1}^{k-1}$, dar $C_{n-1}^{k-1}$ ar fii modificat în $C_n^{k-1}$ dacă am face generarea de la stânga la dreapta. Așa că vom genera [[Combinări|combinările]] de la dreapta la stângă, păstrând astfel valorile de care avem nevoie (cea curentă și cea de la stânga) intacte cât timp avem nevoie de ele. 
-Folosind doar un vector, [[Complexitatea de spațiu]] ajunge la doar $O(n)$.
+Folosind doar un vector, [[Complexitatea de spațiu|complexitatea de spațiu]] ajunge la doar $O(n)$.
 La aceasta variantă nu mai există îmbunătățiri posibile.
-#### Varianta [[iterativă]]
+#### Varianta iterativă
 În această variantă la orice moment dat $C_n^k=C_{\text{level}}^{i-1}$
 Deci, în `level` știm rândul pe care ne aflăm din [[Triunghiul lui Pascal#Forma Matrice matriceală|forma matriceală a triunghiul lui Pascal]], iar în `i` știm coloana
 `c[level+1]` este întotdeauna `1` pentru că indexarea începe de la `1`
@@ -72,7 +72,7 @@ int main(){
     return 0;
 }
 ```
-#### Varianta [[Recursivitate|recursivă]]
+#### Varianta [[Recursivitatea|recursivă]]
 În această variantă la orice moment dat $C_n^k=C_{\text{niv}}^{i-1}$
 Deci, în `niv` știm rândul pe care ne aflăm din [[Triunghiul lui Pascal#Forma Matrice matriceală|forma matriceală a triunghiul lui Pascal]], iar în `i` știm coloana
 `c[niv+1]` este întotdeauna `1` pentru că indexarea începe de la `1`.

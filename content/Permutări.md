@@ -1,7 +1,7 @@
 $P_n=n!$
 Permutările lui n sunt chiar factorial de n, deci implementăm o funcție de factorial
 # Numărul de permutări
-Cea mai ușor de implementat e varianta [[Recursivitate|recursivă]]:
+Cea mai ușor de implementat e varianta [[Recursivitatea|recursivă]]:
 ```cpp
 int permutari(int n){
 	if(n <= 1)

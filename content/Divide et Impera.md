@@ -1,4 +1,4 @@
-Tradus divide și stăpânește, presupune sa împarți o problema in cat mai multe bucăți mai mici de obicei prin [[Recursivitate]], dar uneori și iterativ, cum se mai practică pentru [[Căutare binară]]. În cazul programării, se folosește mai ales pentru vectori sau șiruri, de ex [[Merge Sort]]. Trebuie menționat că deși în cazul [[Merge Sort]] complexitatea este de $O(n\times log_{2} (n))$, asta nu este o caracteristica a [[Divide et Impera]], suma vectorilor având complexitate $O(n)$.
+Tradus divide și stăpânește, presupune sa împarți o problema in cat mai multe bucăți mai mici de obicei prin [[Recursivitatea]], dar uneori și iterativ, cum se mai practică pentru [[Căutarea binară]]. În cazul programării, se folosește mai ales pentru vectori sau șiruri, de ex [[Merge Sort]]. Trebuie menționat că deși în cazul [[Merge Sort]] complexitatea este de $O(n\times \log_{2}n)$, asta nu este o caracteristica a [[Divide et Impera]], suma vectorilor având complexitate $O(n)$.
 
 Un exemplu pentru suma vectorilor este
 ```cpp
