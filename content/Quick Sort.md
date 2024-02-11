@@ -43,7 +43,7 @@ int partitie(int st, int dr){
 # Analiza complexității
 ## Complexitate spațiu
 [[Complexitatea de spațiu]] este dezbătută, există estimări pentru $O(1)$ deoarece nu folosește vectori auxiliari, alții spun că are complexitate $O(\log_2 n)$ din cauza stivei, iar unii spun că are complexitate $O(n)$. Oricum ar fi, este general acceptat că folosește mai puțin spațiu ca [[Merge Sort]].
-# Complexitate timp
+## Complexitate timp
 [[Complexitatea de timp]] pentru acest algoritm este foarte interesantă. În cazul mediu vom avea jumătate din elemente mai mici ca pivotul și jumătate din elemente mai mari ca pivotul, iar acest lucru ar însemna că noi am face $\log_2 n$ apeluri recursive ale funcției `partitie`, iar funcția `partitie` are o complexitate liniară $O(n)$, rezultând o complexitate în cel mai bun caz de $O(n \times\log_2 n)$. Aceeași complexitate apare și în cazul mediu, deoarece, statistic vorbind, este cel mai probabil ca pivotul să fie aproape de mijloc.
 
 Problema apare în cazul unui șir sortat, unde am folosi `partitie` de $n$ ori, pe șiruri doar cu 1 element în minus, deci am avea o complexitate de $O\left(\frac{n(n-1)}{2}\right)$ care se aproximează la $O(n^2)$. Evident pentru a evita astfel de cazuri putem folosi o varietate de metode, cum ar fi alegerea pivotului în mijloc, amestecarea șirului înainte de sortare, etc.
