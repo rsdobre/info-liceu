@@ -1,4 +1,4 @@
-Este un algoritm de [[Sortare|sortare]] de tip [[Divide et Impera]], în loc, adică nu folosește vectori auxiliari ca [[Merge Sort]]. [[Complexitatea de timp|Complexitatea medie]] este de $O( n\times (\log_2\ n))$, dar complexitatea în cazul unui vector ordonat la [[Quick Sort]] crește la $O(n^2)$. 
+Este un algoritm de [[Sortare|sortare]] de tip [[Divide et Impera]], în loc, adică nu folosește vectori auxiliari ca [[Merge Sort]]. [[Complexitatea de timp|Complexitatea medie]] este de $O( n\times \log_2 n)$, dar complexitatea în cazul unui vector ordonat la [[Quick Sort]] crește la $O(n^2)$ ([[#Complexitate timp|vezi mai multe explicații]])
 # Funcționare
 Fiind vorba de [[Divide et Impera]], evident algoritmul sortează intervale din șirul nostru. Spre deosebire de [[Merge Sort]], unde sortam jumătăți de șir, aici vom efectua un sortare după un **pivot**. După ce alegem un pivot, încercăm să îl aducem la poziția lui finală, mai exact, toate elementele din stânga lui să fie mai mici, iar toate elementele din dreapta să fie mai mari. După ce ducem pivotul pe poziția lui, reapelăm QuickSort pentru cele 2 intervale din stânga și dreapta.
 
